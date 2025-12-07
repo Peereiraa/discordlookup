@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>DISCORD LOOKUP</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="wrap">
+        <h1 class="title">DISCORD LOOKUP</h1>
+
+        <div class="search">
+            <select id="type">
+                <option value="user">User</option>
+                <option value="guild">Server</option>
+            </select>
+            <div class="input-wrap">
+                <input id="idInput" type="text" placeholder="Introduce el ID o URL de invitación" />
+                <button id="searchBtn">Buscar</button>
+            </div>
+        </div>
+
+        <div id="result" class="result hidden">
+        </div>
+
+        <footer class="footer">
+            <small>© <span id="year"></span> DISCORD LOOKUP · Created with ♥</small>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

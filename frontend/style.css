@@ -1,0 +1,209 @@
+:root {
+    --bg: #0b0b0c;
+    --panel: #0f1113;
+    --muted: #9aa1a6;
+    --accent: #5865f2;
+    --glass: rgba(255, 255, 255, 0.03);
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: radial-gradient(1200px 600px at 10% 10%, rgba(88, 101, 242, 0.06), transparent),
+        radial-gradient(800px 400px at 90% 90%, rgba(0, 0, 0, 0.3), transparent),
+        var(--bg);
+    color: #e6eef3;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 920px;
+    padding: 36px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.title {
+    margin: 0 0 18px 0;
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: var(--accent);
+    text-shadow: 0 6px 30px rgba(88, 101, 242, 0.06);
+}
+
+.search {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+#type {
+    background: var(--panel);
+    color: var(--muted);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    outline: none;
+    font-weight: 600;
+}
+
+.input-wrap {
+    display: flex;
+    gap: 8px;
+    width: 70%;
+    max-width: 560px;
+}
+
+input#idInput {
+    flex: 1;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    background: var(--glass);
+    color: inherit;
+    outline: none;
+    transition: box-shadow .18s ease, transform .12s ease;
+}
+
+input#idInput:focus {
+    box-shadow: 0 8px 30px rgba(88, 101, 242, 0.06);
+    transform: translateY(-2px);
+}
+
+button#searchBtn {
+    background: linear-gradient(180deg, var(--accent), #4750d9);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: transform .12s ease, box-shadow .12s;
+}
+
+button#searchBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(88, 101, 242, 0.12)
+}
+
+.result {
+    margin-top: 20px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 18px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
+    padding: 18px;
+    border-radius: 12px;
+    align-items: start;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    position: relative;
+    overflow: hidden;
+}
+
+.avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.3));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block
+}
+
+.info h2 {
+    margin: 0;
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center
+}
+
+.info p {
+    margin: 6px 0;
+    color: var(--muted)
+}
+
+.badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 8px
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 6px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    color: var(--muted);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.meta {
+    margin-top: 12px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.meta .chip {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: var(--muted);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.banner {
+    margin-top: 14px;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 80px;
+}
+
+.hidden {
+    display: none
+}
+
+.footer {
+    margin-top: 18px;
+    text-align: center;
+    color: var(--muted)
+}
+
+.small-muted {
+    color: var(--muted);
+    font-size: 13px
+}
